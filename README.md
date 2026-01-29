@@ -16,8 +16,7 @@
 
 ## About
 
-<Blurb>
-<SETUP: you'll need to manual create "term request" and "field request" labels in order for the issue forms to apply them when generated. You'll also want to go through documentation and replace all the <INSERT values with appropriate information.>
+The **iMicroSeq Contextual Data Specification** defines a standardized, ontology-informed modular framework for capturing contextual (metadata) associated with microbial sequencing data generated through the iMicroSeq program. The specification is designed to support harmonized, interoperable data across environmental, public health, and One Health use cases, with a particular focus on environmental **water-based monitoring**. This repository contains the authoritative data schema, along with supporting documentation, mapping to downstream repositories and guidance materials. This repository is not used for data submission to the iMicroSeq Portal. To submit data or for questions related to data access and workflows, please visit the iMicroSeq Data Portal.
 
 ## What are ontologies and how do they improve data quality?
 
