@@ -25,19 +25,9 @@ Labs collect, encode and store information in different ways. They use different
 
 Ontologies are collections of controlled vocabulary that are arranged in a hierarchy, where all the terms are linked using logical relationships. Ontologies are open source and meant to represent “universal truth” as much as possible (so not tied to one organization’s vocabulary of use case). Ontologies encode synonyms, which enables mapping between the specific languages used by different organizations, and every term in the ontology is assigned a globally unique and persistent identifier. Using ontology terms to standardize GRDI-AMR contextual data not only helps make data more interoperable by using a common language, it also helps to make contextual data [FAIR](https://www.go-fair.org/fair-principles/) (Findable, Accessible, Interoperable, Reusable).
 
-## The <insert name> Contextual Data Specification Package
+## The iMicroSeq Contextual Data Specification Package
 
-This specification is implemented via <spreadsheet-based data collection instrument, a DataHarmonizer validation template, other...>, accompanying **Field** and **Term reference guides** (which provide definitions and additional specific guidance) and a curation **Standard Operating Procedure (SOP)**. New terms and/or term changes can be requested using issue request forms, with additional guidance on how to do so outline in the New Term Request (NTR) SOP. This resources are available in the files of this repository and listed below under **Package Contents**.
-
-### Version Control
-
-Please note that development of the specification is dynamic and it will be updated periodically to address user needs. Versioning is done in the format of `x.y.z`.
-
-`x` = Field level changes <br>
-`y` = Term value / ID level changes <br>
-`z` = Definition, guidance, example, formatting, or other uncategorized changes
-
-Descriptions of changes are provided in [release notes](https://github.com/cidgoh/<INSERT REPOSITORY NAME>/releases) for every new version.
+This specification is implemented via a DataHarmonizer validation template, with accompanying **Field** and **Term reference guides** (which provide definitions and additional specific guidance) and a curation **Standard Operating Procedure (SOP)**. New terms and/or term changes can be requested using issue request forms, with additional guidance on how to do so outline in the **New Term Request (NTR) SOP**. These resources and locations are listed below under **Package Contents**.
 
 ### Package Contents
 
@@ -50,23 +40,28 @@ Descriptions of changes are provided in [release notes](https://github.com/cidgo
   - Further information about application functionality can be found on the [DataHarmonizer Wiki](https://github.com/cidgoh/pathogen-genomics-package/wiki/DataHarmonizer-Getting-Started).
 
 #### Field and Term Reference Guides
-- [XLSX version]()
+- [XLSX version]() _TBD_
 - PDF version
-  - [Field Reference Guide]()
-  - [Term Reference Guide]()
-- [Online version]()
+  - [Field Reference Guide]() _TBD
+  - [Term Reference Guide]() _TBD
 
 #### Curation SOP
-- [PDF version]()
-- [Online version]()
-
-#### DataHarmonizer Instructions and SOP
-- [PDF version]()
-- [Online version]()
+- [PDF version]() _TBD
+- [Online version]() _TBD
 
 #### New Term Request (NTR) SOP
 - [PDF version]()
 - [Online version]()
+
+### Version Control
+
+Please note that development of the specification is dynamic and it will be updated periodically to address user needs. Versioning is done in the format of `x.y.z`.
+
+`x` = Field level changes <br>
+`y` = Term value / ID level changes <br>
+`z` = Definition, guidance, example, formatting, or other uncategorized changes
+
+Descriptions of changes are provided in [release notes](https://github.com/cidgoh/<INSERT REPOSITORY NAME>/releases) for every new version.
 
 ## Contacts
 For more information and/or assistance, contact <INSERT CONTACT NAME> at <INSERT CONTACT EMAIL> or submit a repository [issue request](<INSERT REPOSITORY ISSUES URL>).
@@ -77,6 +72,6 @@ _Pending / To Be Determined_
 
 ## Acknowledgements
 
-Brought to you by The [Centre for Infectious disease Genomics and One Health](https://cidgoh.ca/)<and INSERT COLLABORATOR NAMES>
+Brought to you by The [Centre for Infectious disease Genomics and One Health](https://cidgoh.ca/) as part of the [iMicroSeq Project](https://genomecanada.ca/project/imicroseq-integrated-inclusive-resources-supporting-environmental-sequence-data/), a Genome Canada funded project under the eDNA Surveillance Program.
 
 ![LogoCIDGOH2](https://github.com/cidgoh/specification-repo-template/assets/48695054/87fa713d-8fd7-453d-8542-fc413069e842)
