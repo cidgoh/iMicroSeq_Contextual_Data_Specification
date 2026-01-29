@@ -2,7 +2,7 @@
 
   - [About](#about)
   - [What are ontologies and how do they improve data quality?](#what-are-ontologies-and-how-do-they-improve-data-quality)
-  - [The  Contextual Data Specification Package](#the--contextual-data-specification-package)
+  - [The iMicroSeq Contextual Data Specification Package](#the-imicroseq-contextual-data-specification-package)
     - [Version Control](#version-control)
     - [Package Contents](#package-contents)
       - [Data Collection Template](#data-collection-template)
