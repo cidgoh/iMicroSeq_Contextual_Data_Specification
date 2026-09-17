@@ -1,4 +1,4 @@
-# iMicroSeq testing and validation package
+# iMicroSeq testing package
 
 **Version 1.2 — draft for testing round 1, revised 2026-09-16**
 
@@ -28,7 +28,7 @@ test, not the DataHarmonizer**. The instructions say so up front.
 ## Contents
 
 ```
-iMicroSeq Testing Package/
+Testing/
 ├── README.md                                        this file
 ├── iMicroSeq_Testing-Instructions_v1.2.docx         the testing protocol, Parts A–D
 ├── iMicroSeq_Worked-Example-Scenarios_v1.2.docx     the three scenarios, written out
@@ -43,17 +43,14 @@ iMicroSeq Testing Package/
 │       ├── iMicroSeq_AnswerKey_Surface-Water-Watershed_v1.0.xlsx
 │       └── iMicroSeq_AnswerKey_Marine-Aquaculture-Host_v1.0.xlsx
 ├── Feedback/
-│   ├── iMicroSeq_Testing-Feedback-Form_v1.2.docx    13-section structured form
-│   ├── iMicroSeq_Field-Level-Feedback_v1.2.xlsx     6 sheets, incl. all 155 fields pre-listed
+│   ├── iMicroSeq_Testing-Feedback-Form_v1.2.docx    earlier Word draft - superseded by the Google Form, whose questions and order now differ
+│   ├── iMicroSeq_Field-Level-Feedback_v1.2.xlsx     optional; 6 sheets, incl. all 155 fields pre-listed
 │   └── Archive/                                     superseded v1.1 files
-├── Validation/                                      team QC only - not referred to in the tester instructions
-│   ├── README.md
-│   ├── imicroseq_validate.py                        standalone QC script
-│   ├── imicroseq_schema.json                        machine-readable schema (spec export 2026-09-16)
-│   ├── example_with_errors.csv                      demo file with deliberate defects
-│   └── Archive/                                     previous schema (2026-08-05)
 └── Archive/                                         superseded v1.1 documents
 ```
+
+The feedback form testers complete is the Google Form at https://forms.gle/tQaS8h7wcqxSaghE6. It is
+the only required return; the field-level workbook is optional.
 
 ---
 
@@ -85,13 +82,12 @@ Each answer key workbook has three sheets:
 
 - **Answer Key (FICTIONAL)** — the formatted template view, colour-coded yellow / purple / white for
   required / recommended / optional.
-- **DH_import** — the same records with a single header row, for import or for running through
-  the validator.
+- **DH_import** — the same records with a single header row, for import into the DataHarmonizer.
 - **Scenario (FICTIONAL)** — the narrative, what the scenario is testing, and the fictional-data
   banner.
 
-Every answer key validates with **zero errors and zero warnings** against
-`Validation/imicroseq_validate.py` against the 2026-09-16 schema. Recommended fields that do not apply carry an explicit null
+Every answer key validates against the 2026-09-16 specification with **zero errors and zero
+warnings**. Recommended fields that do not apply carry an explicit null
 value rather than a blank — that is a deliberate teaching point, not padding.
 
 ---
@@ -103,11 +99,11 @@ value rather than a blank — that is a deliberate teaching point, not padding.
 | A — Orientation | Read the SOP and reference guide; open the template; record a first impression | 30 min |
 | B — Worked scenarios | Curate each scenario, **validate it in the DataHarmonizer**, save, then compare against the answer key | 1.5–2 h |
 | C — Your own data | Curate 10–20 of their own records and **validate them**, locally — the file is never returned | 2–3 h |
-| D — Feedback | Feedback form, field-level workbook, optional 45 min debrief — the only deliverable | 30–45 min |
+| D — Feedback | Feedback form (Google Form, required — the only deliverable); field-level workbook and 45 min debrief optional | 30–45 min |
 
 Validation is part of the curation loop in Parts B and C rather than a separate part (agreed
 2026-09-16). Setting up the DataHarmonizer (download the .zip from the iMicroSeq repository's
-`Template` folder, unzip, open `index.html`, pick the iMicroSeq template) is Section 4 of the
+`Template` folder, unzip, open `web/dist/index.html`, pick the iMicroSeq template) is Section 4 of the
 instructions. Total 4–6 hours, all of it on the tester's own machine in the DataHarmonizer. A tester who stops
 after Part B still contributes something usable. Testers are not asked to share any of their own
 data — the specification is what is under test, not their records.
@@ -121,15 +117,15 @@ data — the specification is what is under test, not their records.
       consent statement in the Testing Instructions (§6) and the Call-Out. Both currently carry a
       placeholder callout saying so.
 - [x] **Contact details.** Done — all four documents carry Emma Griffiths, emma_griffiths@sfu.ca.
-- [ ] **DataHarmonizer .zip.** Upload the DataHarmonizer .zip containing the iMicroSeq template to the
-      `Template` folder of the iMicroSeq GitHub repository, then replace the highlighted placeholder
-      filename in §4 of the Testing Instructions. Build it from the 2026-09-16 spec so it has 155 fields.
+- [x] **DataHarmonizer .zip.** `Template/DataHarmonizer.zip` is in the repository and linked from §4 of the
+      Testing Instructions.
+- [x] **Feedback form.** Live as a Google Form and linked from the Testing Instructions.
 - [ ] **Spec source fixes.** `conductivity measurement unit` has range `ConductivityMeasurementUnit`
       (missing `Menu`); `host age unit` points at `HostAgeUnitInternationalMenu`, which does not exist;
 the term
       `Excretory system (organizational term)` has no ontology ID. Check these in the template build.
-- [ ] **Return route.** Currently email to Emma Griffiths — confirm, and state it in §6 of the Testing Instructions. Testers keep their own data:
-      all testing is local, and only feedback (plus, optionally, the fictional Part B files) comes back.
+- [ ] **Return route.** The feedback form is submitted online. Optional extras (field-level workbook, Part B
+      files) are emailed to Emma Griffiths — confirm. Testers keep their own data: all testing is local.
 - [ ] **Deadline.** Set the return date and replace the highlighted placeholder in §6 of the Testing Instructions.
 - [x] **New term request route.** The issue forms (new term, bulk new term, new field, change field,
       change term) are live in the iMicroSeq repository; the instructions link to them.
@@ -138,20 +134,30 @@ the term
 
 ## Analysing the returns
 
-The feedback instruments are designed so that returns can be aggregated rather than read one by one:
+The feedback instruments are designed so that returns can be aggregated rather than read one by one.
+The Google Form is required; the field-level workbook sheets below are optional, so expect fewer of them:
 
-- **Feedback form §3 and §9** are matched Likert blocks — nine and four statements. Tabulate across
-  testers; a mean below 3 on any statement is a flag.
+- **Feedback form (Google Form)** — sections: About you; Privacy and data sharing; Effort; Fitness for
+  purpose; Gaps in the specification; Completing the exercise (Parts B and C); Adoption; Closing remarks.
+  Export responses to a sheet and:
+  - tabulate the **Fitness for purpose** grid — eleven statements rated strongly disagree to strongly
+    agree, required on every submission; a mean below "neutral" on any statement is a flag;
+  - tabulate the **SOP grid** (Curation, DataHarmonizer and NTR SOPs) and the **modules** checkbox
+    question the same way;
+  - treat **Gaps in the specification** (missing fields, missing terms) as the main source of the new
+    term request backlog, and **Completing the exercise** (scenario differences, unplaced narrative
+    information, validation messages) as the main source of definition fixes;
+  - use **Privacy and data sharing** to find fields that cannot be shared onward, and **Adoption**
+    for barriers to uptake.
 - **Field-level workbook, `Field feedback` sheet** — pre-populated with all 155 fields, with
   drop-downs in the "usable?" and "do you hold this data?" columns. Count by field to find the
   fields that broke for more than one tester.
-- **`Missing fields` and `Missing terms` sheets** — the source of the new term request backlog.
+- **`Missing fields` and `Missing terms` sheets** — add to the backlog from the form's Gaps section.
   Sort by the priority column.
 - **`Scenario comparison` sheet** — S1–S3. Where several testers diverge from the answer key on the
   same field, the field definition is at fault, not the testers.
 - **`Validation issues` sheet** — validation messages testers found wrong or unclear; each one points
-  at a rule in the specification (or a drift between the template and the specification). The team
-  can re-check any disputed rule with the standalone validator.
+  at a rule in the specification (or a drift between the template and the specification).
 
 Feed the results into a revision list versioned `x.y.z`, where `x` is a field-level change, `y` a
 term or identifier change, and `z` a definition, guidance or formatting change — the same scheme
@@ -189,8 +195,8 @@ curation, and all test data brought up to the 2026-09-16 specification export.
   the DataHarmonizer .zip from the iMicroSeq repository (filename placeholder highlighted); a
   troubleshooting table; and short numbered steps.
 - **Validate is now a step inside Parts B and C** (curate → validate → fix → note → save). The
-  separate "Validate and export" part is gone, so the protocol is Parts A–D. The standalone
-  validator and the export step are no longer in the tester instructions.
+  separate "Validate and export" part is gone, so the protocol is Parts A–D. The export step is no
+  longer in the tester instructions, and the standalone validation folder is no longer part of testing.
 - **Answer keys and blank template updated to the 2026-09-16 spec (155 fields, 13 required):**
   columns reordered to match the spec; the two new required fields `data steward contact name` and
   `data steward contact email` filled in; `geo loc name (state/province/territory)` now carries GAZ
@@ -206,11 +212,17 @@ curation, and all test data brought up to the 2026-09-16 specification export.
   Sample collection, where the DataHarmonizer does. The host fields follow the schema order
   (host (common name), host (scientific name), host age, host age unit, host age bin), all in one
   `Host information` section now that the `Host Information` spelling has been fixed in the spec.
-- **Validator schema regenerated** from the TSV exports; previous schema archived.
 - Worked Example Scenarios, Call-Out, Feedback Form and Field-Level Feedback workbook brought into
-  line: counts, filenames, section names, validation now in Parts B and C, the standalone-validator
+  line: counts, filenames, section names, validation now in Parts B and C, the second-validation-tool
   question removed, and the two new fields added to the field list.
 - Superseded files moved to `Archive/` subfolders.
+- **Package moved to GitHub** (`Testing/` in the iMicroSeq repository). The instructions link to the
+  repository folders, `Template/DataHarmonizer.zip` (opened from `web/dist/index.html`) and the
+  feedback form, which is now a **Google Form and the only required return**. The field-level
+  feedback workbook is optional. The instructions, Call-Out and field-level workbook follow the
+  Google Form's questions: notes from Parts B and C feed its Gaps and Completing the exercise
+  sections, time spent is no longer asked for, the debrief is arranged by email, and organisations
+  (not individuals) are acknowledged if they agree in the form.
 
 **v1.1 — 2026-09-03.** Testing scope narrowed and the local, no-data-sharing model made explicit.
 
@@ -230,6 +242,6 @@ curation, and all test data brought up to the 2026-09-16 specification export.
   place names and coordinates removed — S1's coordinates had been real ones.
 - Contact details filled in throughout: Emma Griffiths, emma_griffiths@sfu.ca.
 - Files revised in this round carry `_v1.1`. The specification itself, the Master Reference Guide,
-  the Curation SOP, the blank template and the validator are unchanged at v1.0.
+  the Curation SOP and the blank template are unchanged at v1.0.
 
 **v1.0 — 2026-08-05.** First draft of the testing package.
