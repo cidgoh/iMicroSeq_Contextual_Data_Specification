@@ -17,11 +17,7 @@ test, not the DataHarmonizer**. The instructions say so up front.
 
 ## Start here
 
-| If you are… | Read |
-|---|---|
-| A tester | `iMicroSeq_Testing-Instructions_v1.2.docx`, then `iMicroSeq_Worked-Example-Scenarios_v1.2.docx` |
-| Recruiting testers | `iMicroSeq_Tester-Call-Out_v1.2.docx` |
-| Running the round | This file, then the "Before you circulate" checklist below |
+Read `iMicroSeq_Testing-Instructions_v1.2.docx`, then `iMicroSeq_Worked-Example-Scenarios_v1.2.docx`.
 
 ---
 
@@ -32,21 +28,15 @@ Testing/
 ├── README.md                                        this file
 ├── iMicroSeq_Testing-Instructions_v1.2.docx         the testing protocol, Parts A–D
 ├── iMicroSeq_Worked-Example-Scenarios_v1.2.docx     the three scenarios, written out
-├── iMicroSeq_Tester-Call-Out_v1.2.docx              recruitment invitation
 ├── Answer Keys/
 │   ├── iMicroSeq_Blank-Template_v1.2.xlsx           empty template + full field guide
 │   ├── iMicroSeq_AnswerKey_S1_Municipal-Wastewater_v1.2.xlsx
 │   ├── iMicroSeq_AnswerKey_S2_Drinking-Source-Water_v1.2.xlsx
 │   ├── iMicroSeq_AnswerKey_S3_Leachate-Mining-AMR_v1.2.xlsx
-│   ├── Archive/                                     superseded v1.1 keys and v1.0 blank template
-│   └── Not in round 1/                              two scenarios parked for a later round (not updated to the 2026-09-16 spec)
-│       ├── iMicroSeq_AnswerKey_Surface-Water-Watershed_v1.0.xlsx
-│       └── iMicroSeq_AnswerKey_Marine-Aquaculture-Host_v1.0.xlsx
-├── Feedback/
-│   ├── iMicroSeq_Testing-Feedback-Form_v1.2.docx    earlier Word draft - superseded by the Google Form, whose questions and order now differ
-│   ├── iMicroSeq_Field-Level-Feedback_v1.2.xlsx     optional; 6 sheets, incl. all 155 fields pre-listed
-│   └── Archive/                                     superseded v1.1 files
-└── Archive/                                         superseded v1.1 documents
+│   └── README.md
+└── Feedback/
+    ├── iMicroSeq_Field-Level-Feedback_v1.2.xlsx     optional; 6 sheets, incl. all 155 fields pre-listed
+    └── README.md
 ```
 
 The feedback form testers complete is the Google Form at https://forms.gle/tQaS8h7wcqxSaghE6. It is
@@ -67,8 +57,7 @@ All content is fictional and flagged as such.
 | **S2** | Source and drinking water, community-triggered | 3 | Groundwater and distribution systems, bag-mediated filtration, community observation terms, 16S amplicon, `Restricted Access` for governance-sensitive fields |
 | **S3** | Landfill leachate and mining-influenced water | 3 | Mining and landfill land uses, leachate and runoff, passive sampling and pooling, pH and conductivity extremes, AMR gene targets |
 
-Testers curate all three. The surface-water/watershed and marine-aquaculture scenarios are kept in
-`Answer Keys/Not in round 1/` for a later round.
+Testers curate all three. Surface-water/watershed and marine-aquaculture scenarios are held back for a later round.
 
 ### Everything in them is fictional, and says so
 
@@ -107,61 +96,6 @@ Validation is part of the curation loop in Parts B and C rather than a separate 
 instructions. Total 4–6 hours, all of it on the tester's own machine in the DataHarmonizer. A tester who stops
 after Part B still contributes something usable. Testers are not asked to share any of their own
 data — the specification is what is under test, not their records.
-
----
-
-## Before you circulate this package
-
-- [ ] **Ethics.** Confirm whether this round falls under the existing SFU REB approval covering the
-      needs assessment, needs an amendment, or is exempt as quality improvement. Insert the agreed
-      consent statement in the Testing Instructions (§6) and the Call-Out. Both currently carry a
-      placeholder callout saying so.
-- [x] **Contact details.** Done — all four documents carry Emma Griffiths, emma_griffiths@sfu.ca.
-- [x] **DataHarmonizer .zip.** `Template/DataHarmonizer.zip` is in the repository and linked from §4 of the
-      Testing Instructions.
-- [x] **Feedback form.** Live as a Google Form and linked from the Testing Instructions.
-- [ ] **Spec source fixes.** `conductivity measurement unit` has range `ConductivityMeasurementUnit`
-      (missing `Menu`); `host age unit` points at `HostAgeUnitInternationalMenu`, which does not exist;
-the term
-      `Excretory system (organizational term)` has no ontology ID. Check these in the template build.
-- [ ] **Return route.** The feedback form is submitted online. Optional extras (field-level workbook, Part B
-      files) are emailed to Emma Griffiths — confirm. Testers keep their own data: all testing is local.
-- [ ] **Deadline.** Set the return date and replace the highlighted placeholder in §6 of the Testing Instructions.
-- [x] **New term request route.** The issue forms (new term, bulk new term, new field, change field,
-      change term) are live in the iMicroSeq repository; the instructions link to them.
-
----
-
-## Analysing the returns
-
-The feedback instruments are designed so that returns can be aggregated rather than read one by one.
-The Google Form is required; the field-level workbook sheets below are optional, so expect fewer of them:
-
-- **Feedback form (Google Form)** — sections: About you; Privacy and data sharing; Effort; Fitness for
-  purpose; Gaps in the specification; Completing the exercise (Parts B and C); Adoption; Closing remarks.
-  Export responses to a sheet and:
-  - tabulate the **Fitness for purpose** grid — eleven statements rated strongly disagree to strongly
-    agree, required on every submission; a mean below "neutral" on any statement is a flag;
-  - tabulate the **SOP grid** (Curation, DataHarmonizer and NTR SOPs) and the **modules** checkbox
-    question the same way;
-  - treat **Gaps in the specification** (missing fields, missing terms) as the main source of the new
-    term request backlog, and **Completing the exercise** (scenario differences, unplaced narrative
-    information, validation messages) as the main source of definition fixes;
-  - use **Privacy and data sharing** to find fields that cannot be shared onward, and **Adoption**
-    for barriers to uptake.
-- **Field-level workbook, `Field feedback` sheet** — pre-populated with all 155 fields, with
-  drop-downs in the "usable?" and "do you hold this data?" columns. Count by field to find the
-  fields that broke for more than one tester.
-- **`Missing fields` and `Missing terms` sheets** — add to the backlog from the form's Gaps section.
-  Sort by the priority column.
-- **`Scenario comparison` sheet** — S1–S3. Where several testers diverge from the answer key on the
-  same field, the field definition is at fault, not the testers.
-- **`Validation issues` sheet** — validation messages testers found wrong or unclear; each one points
-  at a rule in the specification (or a drift between the template and the specification).
-
-Feed the results into a revision list versioned `x.y.z`, where `x` is a field-level change, `y` a
-term or identifier change, and `z` a definition, guidance or formatting change — the same scheme
-the PHA4GE wastewater specification uses.
 
 ---
 
@@ -212,14 +146,14 @@ curation, and all test data brought up to the 2026-09-16 specification export.
   Sample collection, where the DataHarmonizer does. The host fields follow the schema order
   (host (common name), host (scientific name), host age, host age unit, host age bin), all in one
   `Host information` section now that the `Host Information` spelling has been fixed in the spec.
-- Worked Example Scenarios, Call-Out, Feedback Form and Field-Level Feedback workbook brought into
+- Worked Example Scenarios, Feedback Form and Field-Level Feedback workbook brought into
   line: counts, filenames, section names, validation now in Parts B and C, the second-validation-tool
   question removed, and the two new fields added to the field list.
 - Superseded files moved to `Archive/` subfolders.
 - **Package moved to GitHub** (`Testing/` in the iMicroSeq repository). The instructions link to the
   repository folders, `Template/DataHarmonizer.zip` (opened from `web/dist/index.html`) and the
   feedback form, which is now a **Google Form and the only required return**. The field-level
-  feedback workbook is optional. The instructions, Call-Out and field-level workbook follow the
+  feedback workbook is optional. The instructions and field-level workbook follow the
   Google Form's questions: notes from Parts B and C feed its Gaps and Completing the exercise
   sections, time spent is no longer asked for, the debrief is arranged by email, and organisations
   (not individuals) are acknowledged if they agree in the form.
@@ -228,7 +162,7 @@ curation, and all test data brought up to the 2026-09-16 specification export.
 
 - Testing is stated throughout as local: testers work in the DataHarmonizer on their own machine,
   nothing is uploaded, and **their own data is never returned to us**. Only the feedback instruments
-  come back (plus, optionally, the fictional scenario files). Changed in the Call-Out, Testing
+  come back (plus, optionally, the fictional scenario files). Changed in the Testing
   Instructions (§1 callout, §3, Part C callout, §4 table, §5 return table, §6 ethics note) and the
   feedback form.
 - The specification is framed as a **common denominator, not a superset** — a core set the majority
